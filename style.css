@@ -101,8 +101,8 @@ html, body {
 
 .envelope {
   position: relative;
-  width: 320px;
-  height: 220px;
+  width: 340px;
+  height: 230px;
   transform-style: preserve-3d;
   transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -126,30 +126,32 @@ html, body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  padding: 20px;
+  justify-content: flex-end;
+  padding: 16px 18px 22px;
   text-align: center;
 }
 
 .envelope-text {
   font-family: 'Pacifico', cursive;
-  font-size: 1.6rem;
+  font-size: 1.45rem;
   color: var(--accent);
-  line-height: 1.3;
-  margin-bottom: 8px;
+  line-height: 1.25;
+  margin-bottom: 6px;
   text-shadow: 0 2px 8px rgba(233,30,99,0.2);
+  max-width: 95%;
+  word-spacing: 2px;
 }
 
 .envelope-emoji {
-  font-size: 1.8rem;
-  margin: 6px 0;
+  font-size: 1.7rem;
+  margin: 4px 0;
 }
 
 .tap-hint {
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   color: var(--text-light);
-  margin-top: 10px;
-  opacity: 0.8;
+  margin-top: 6px;
+  opacity: 0.85;
   animation: pulse 1.8s ease-in-out infinite;
 }
 
@@ -158,13 +160,13 @@ html, body {
   50% { opacity: 1; }
 }
 
-/* Flap */
+/* Flap - shorter so text is fully readable */
 .envelope-flap {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 110px;
+  height: 78px;
   background: linear-gradient(180deg, #f48fb1, #ec407a);
   clip-path: polygon(0 0, 100% 0, 50% 100%);
   transform-origin: top center;
@@ -183,10 +185,10 @@ html, body {
 .envelope-letter {
   position: absolute;
   left: 50%;
-  top: 40%;
+  top: 45%;
   transform: translate(-50%, 0) scale(0.85);
-  width: 260px;
-  height: 160px;
+  width: 270px;
+  height: 155px;
   background: var(--card);
   border-radius: 10px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.12);
@@ -200,8 +202,8 @@ html, body {
 
 .envelope.open .envelope-letter {
   opacity: 1;
-  top: -20px;
-  transform: translate(-50%, -30px) scale(1);
+  top: -15px;
+  transform: translate(-50%, -35px) scale(1);
 }
 
 .letter-preview span {
@@ -461,11 +463,14 @@ html, body {
 /* Responsive */
 @media (max-width: 480px) {
   .envelope {
-    width: 280px;
-    height: 200px;
+    width: 300px;
+    height: 210px;
+  }
+  .envelope-flap {
+    height: 70px;
   }
   .envelope-text {
-    font-size: 1.35rem;
+    font-size: 1.28rem;
   }
   .card-inner {
     padding: 26px 20px;
