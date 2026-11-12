@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Teacher's Day ❤️</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;500;600;700&family=Great+Vibes&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Background music (low volume, loop) -->
+  <audio id="bgMusic" loop preload="auto">
+    <source src="assets/you are my sunshine.mp3" type="audio/mpeg" />
+  </audio>
+  <audio id="clickSfx" preload="auto">
+    <source src="assets/sfx_click.mp3" type="audio/mpeg" />
+  </audio>
+
+  <!-- Soft floating particles / hearts -->
+  <div class="particles" id="particles"></div>
+
+  <!-- Main container -->
+  <div class="app">
+    <!-- PAGE 1 : Envelope -->
+    <section class="page page-1 active" id="page1">
+      <div class="envelope-wrapper">
+        <div class="envelope" id="envelope">
+          <div class="envelope-flap"></div>
+          <div class="envelope-body">
+            <div class="envelope-front">
+              <p class="envelope-text">𝐇𝐚𝐩𝐩𝐲   𝐓𝐞𝐚𝐜𝐡𝐞𝐫'𝐬 𝐃𝐚𝐲</p>
+              <span class="envelope-emoji">📚✨</span>
+              <p class="tap-hint">Ketuk untuk membuka</p>
+            </div>
+          </div>
+          <div class="envelope-letter">
+            <div class="letter-preview">
+              <span>💌</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PAGE 2 : Sastra / Motivasi -->
+    <section class="page page-2" id="page2">
+      <div class="card card-poetry">
+        <div class="card-inner">
+          <p class="label">𝘉𝘶𝘵 𝘪𝘯 𝘴𝘢𝘵𝘳𝘢, 𝘸𝘦 𝘴𝘢𝘺</p>
+          <div class="poetry-body">
+            <p>
+              " 𝙎𝙊𝙖𝙞𝙍𝙋𝙊 𝙕𝙞𝙊𝙜 𝙝𝙎𝙛𝙋𝙎𝙗𝙝𝙊𝙗𝙐, 𝙙𝙎𝙗𝙞𝙑 𝙋𝙊𝙍𝙊𝙒 𝙍𝙊𝙗 𝙐𝙎𝙕𝙘𝙖𝙋𝙊𝙗𝙐, 𝙔𝙊𝙖𝙒 𝙊𝙍𝙊𝙕𝙊𝙑 𝙙𝙎𝙛𝙊𝙑𝙞 𝙔𝙎𝙌𝙒𝙕 𝙢𝙊𝙗𝙐 𝙖𝙎𝙗𝙌𝙊𝙛𝙒 𝙊𝙛𝙊𝙑 𝙙𝙞𝙕𝙊𝙗𝙐. 🌊
+            </p>
+            <p>
+              𝙈𝙎𝙗𝙐𝙊𝙓𝙊𝙛𝙔𝙊𝙗 𝙔𝙊𝙖𝙒 𝙖𝙎𝙖𝙋𝙊𝙌𝙊 𝙋𝙒𝙗𝙝𝙊𝙗𝙐, 𝙈𝙎𝙗𝙐𝙊𝙛𝙞𝙗𝙐𝙒 𝙕𝙊𝙞𝙝𝙊𝙗. ⭐
+            </p>
+            <p class="highlight">
+              𝙎𝙎𝙕𝙊𝙖𝙊𝙝 𝙑𝙊𝙛𝙒 𝙐𝙞𝙛𝙞. 𝙀𝙗𝙐𝙔𝙊𝙞𝙕𝙊𝙑 𝙕𝙊𝙋𝙞𝙑𝙊𝙗-𝙔𝙞. ⚓❤️
+            </p>
+          </div>
+          <div class="decor-stars">🌟 ✨ 🌟</div>
+        </div>
+      </div>
+      <button class="nav-btn next-btn" data-next="3">Lanjut →</button>
+    </section>
+
+    <!-- PAGE 3 : Song for you -->
+    <section class="page page-3" id="page3">
+      <div class="card card-song">
+        <div class="card-inner">
+          <h2 class="song-title">Song for youuu 🎵</h2>
+          <p class="song-sub">You Are My Sunshine</p>
+          <div class="vinyl">
+            <div class="vinyl-disc">
+              <div class="vinyl-center"></div>
+            </div>
+          </div>
+          <div class="lyrics">
+            <p>You are my sunshine, my only sunshine ☀️</p>
+            <p>You make me happy when skies are gray 🌧️→🌈</p>
+            <p>You'll never know, dear, how much I love you</p>
+            <p>Please don't take my sunshine away 💛</p>
+          </div>
+          <p class="song-note">Dengarkan lagunya… ini untukmu, Guru 🎧</p>
+        </div>
+      </div>
+      <button class="nav-btn next-btn" data-next="4">Lanjut →</button>
+    </section>
+
+    <!-- PAGE 4 : Terima kasih -->
+    <section class="page page-4" id="page4">
+      <div class="card card-thanks">
+        <div class="card-inner">
+          <h2 class="thanks-title">Terima Kasih 🙏</h2>
+          <div class="thanks-body">
+            <p>
+              𝘛𝘦𝘳𝘪𝘮𝘢𝘬𝘢𝘴𝘪𝘩 𝘢𝘵𝘢𝘴 𝘪𝘭𝘮𝘶 𝘺𝘢𝘯𝘨 𝘦𝘯𝘨𝘬𝘢𝘶 𝘣𝘦𝘳𝘪𝘬𝘢𝘯 𝘴𝘦𝘭𝘢𝘮𝘢 𝘪𝘯𝘪, 𝘴𝘦𝘮𝘰𝘨𝘢 𝘪𝘭𝘮𝘶 𝘺𝘢𝘯𝘨 𝘦𝘯𝘨𝘬𝘢𝘶 𝘣𝘦𝘳𝘪𝘬𝘢𝘯 𝘮𝘦𝘯𝘫𝘢𝘥𝘪 𝘫𝘦𝘮𝘣𝘢𝘵𝘢𝘯 𝘬𝘢𝘮𝘪 𝘶𝘯𝘵𝘶𝘬. 🌉
+            </p>
+            <p>
+              𝘔𝘢𝘢𝘧 𝘫𝘪𝘬𝘢 𝘬𝘢𝘮𝘪 𝘣𝘢𝘯𝘺𝘢𝘬 𝘴𝘢𝘭𝘢𝘩 𝘢𝘵𝘢𝘶 𝘴𝘶𝘴𝘢𝘩 𝘥𝘪𝘢𝘵𝘶𝘳, 𝘯𝘢𝘮𝘶𝘯 𝘦𝘯𝘨𝘬𝘢𝘶 𝘵𝘦𝘵𝘢𝘱 𝘴𝘢𝘣𝘢𝘳 𝘮𝘦𝘯𝘨𝘩𝘢𝘥𝘢𝘱𝘪 𝘬𝘢𝘮𝘪. 🌷
+            </p>
+            <p class="highlight">
+              𝘎𝘶𝘳𝘶 𝘱𝘢𝘩𝘭𝘢𝘸𝘢𝘯 𝘵𝘢𝘯𝘱𝘢 𝘵𝘢𝘯𝘥𝘢. 𝘐𝘻𝘪𝘯𝘬𝘢𝘯 𝘬𝘢𝘮𝘪 𝘮𝘦𝘮𝘣𝘢𝘭𝘢𝘴 𝘣𝘶𝘥𝘪 𝘥𝘪𝘩𝘢𝘳𝘪 𝘬𝘦𝘭𝘢𝘬. 🎓❤️
+            </p>
+          </div>
+          <div class="apple-decor">🍎 📚 🍎</div>
+        </div>
+      </div>
+      <button class="nav-btn next-btn" data-next="5">Lanjut →</button>
+    </section>
+
+    <!-- PAGE 5 : Closing -->
+    <section class="page page-5" id="page5">
+      <div class="card card-closing">
+        <div class="card-inner">
+          <div class="hearts-float">
+            <span>💖</span><span>💕</span><span>💗</span>
+          </div>
+          <h1 class="closing-text">𝓗𝓸𝓿𝓮 𝓾𝓸𝓾𝓾𝓾</h1>
+          <p class="closing-sub">Selalu di hati kami ❤️</p>
+          <p class="closing-emoji">🎓 ✨ 📚 🌟 🍎</p>
+          <p class="closing-from">— dari murid-muridmu yang menyayangimu</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Fixed Back Button -->
+    <button class="back-btn" id="backBtn" title="Kembali">
+      ← Back
+    </button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
