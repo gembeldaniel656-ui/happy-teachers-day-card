@@ -38,7 +38,7 @@
   function startMusic() {
     if (musicStarted) return;
     try {
-      bgMusic.volume = 0.28; // soft, non-intrusive
+      bgMusic.volume = 0.50; // soft, non-intrusive
       bgMusic.loop = true;
       bgMusic.play()
         .then(() => { musicStarted = true; })
