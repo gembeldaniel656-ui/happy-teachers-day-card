@@ -38,7 +38,7 @@
   function startMusic() {
     if (musicStarted) return;
     try {
-      bgMusic.volume = 0.90; // 90% sesuai permintaan
+      bgMusic.volume = 1.0; // 100% (maksimal)
       bgMusic.loop = true;
       bgMusic.play()
         .then(() => { musicStarted = true; })
