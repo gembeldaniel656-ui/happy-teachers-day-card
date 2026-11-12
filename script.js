@@ -1,4 +1,4 @@
-/**
+🙏/**
  * Happy Teacher's Day Interactive Card
  * Clean, structured, and production-ready
  */
@@ -38,7 +38,7 @@
   function startMusic() {
     if (musicStarted) return;
     try {
-      bgMusic.volume = 0.70; // soft, non-intrusive
+      bgMusic.volume = 0.100; // soft, non-intrusive
       bgMusic.loop = true;
       bgMusic.play()
         .then(() => { musicStarted = true; })
