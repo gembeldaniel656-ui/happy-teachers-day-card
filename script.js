@@ -1,4 +1,4 @@
-🙏/**
+/**
  * Happy Teacher's Day Interactive Card
  * Clean, structured, and production-ready
  */
@@ -38,7 +38,7 @@
   function startMusic() {
     if (musicStarted) return;
     try {
-      bgMusic.volume = 0.90; // soft, non-intrusive
+      bgMusic.volume = 0.90; // 90% sesuai permintaan
       bgMusic.loop = true;
       bgMusic.play()
         .then(() => { musicStarted = true; })
@@ -96,7 +96,7 @@
   }
 
   // ---------- Envelope interaction ----------
-  envelope.addEventListener('click', () => {
+  function openEnvelope() {
     if (envelope.classList.contains('open') || isTransitioning) return;
 
     playClick();
@@ -112,7 +112,14 @@
         envelope.classList.remove('open');
       }, 700);
     }, 1100);
-  });
+  }
+
+  envelope.addEventListener('click', openEnvelope);
+  // Juga bisa diklik dari wrapper agar area klik lebih luas
+  const envelopeWrapper = document.querySelector('.envelope-wrapper');
+  if (envelopeWrapper) {
+    envelopeWrapper.addEventListener('click', openEnvelope);
+  }
 
   // ---------- Next buttons ----------
   document.querySelectorAll('.next-btn').forEach((btn) => {
@@ -133,26 +140,27 @@
   const emojis = ['💖', '✨', '🌟', '🍎', '📚', '🎓', '💕', '🌸', '⭐', '💛'];
 
   function createParticle() {
+    if (!particlesContainer) return;
     const el = document.createElement('span');
     el.className = 'particle';
     el.textContent = emojis[Math.floor(Math.random() * emojis.length)];
     el.style.left = Math.random() * 100 + 'vw';
-    el.style.fontSize = 12 + Math.random() * 14 + 'px';
-    el.style.animationDuration = 8 + Math.random() * 12 + 's';
-    el.style.animationDelay = Math.random() * 4 + 's';
+    el.style.fontSize = (12 + Math.random() * 14) + 'px';
+    el.style.animationDuration = (9 + Math.random() * 10) + 's';
+    el.style.animationDelay = (Math.random() * 2) + 's';
     particlesContainer.appendChild(el);
 
     // Clean up after animation
     setTimeout(() => {
-      el.remove();
-    }, 20000);
+      if (el.parentNode) el.remove();
+    }, 22000);
   }
 
   // Spawn particles periodically
-  for (let i = 0; i < 12; i++) {
-    setTimeout(createParticle, i * 600);
+  for (let i = 0; i < 10; i++) {
+    setTimeout(createParticle, i * 500);
   }
-  setInterval(createParticle, 1800);
+  setInterval(createParticle, 1600);
 
   // ---------- Init ----------
   updateBackButton();
